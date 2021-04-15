@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name":"Links Bot",
+    "version":"1.0",
+    "description":"Work with links made easy",
+    "icons": { 
+        "16": "linkbot16.png",
+        "48": "linkbot48.png",
+       "128": "linkbot.png" },
+   
+     "permissions":["storage","activeTab","scripting"],
+    "host_permissions":["<all_urls>"],
+    "content_scripts":[{
+        "matches":["http://*/*/*/*/*","https://*/*/*/*/*","*://*/*"],
+        "css":["content.css"],
+        "js":["content.js","content2.js"]
+    }],
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "content_security_policy": {
+        "data-src": "*"
+    },
+    "offline_enabled":true
+}

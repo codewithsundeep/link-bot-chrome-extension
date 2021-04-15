@@ -1,0 +1,8 @@
+.brokenBold{
+    margin:0px 3px;
+    background-color: black;
+    border: 2px solid white;
+border-radius: 5px;
+    width: fit-content;
+    color: red;
+}

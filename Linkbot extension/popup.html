@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Bot</title>
+    <link rel="shortcut icon" href="linkbot48.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <span class="userGuide contact">Contact us</span>
+    <span class="userGuide donate">Donate us</span> 
+    <div class="nav">
+        
+        <span class="linkidentifier">Link Rel Indicator</span>
+        <span class="domainidentifier">URL Indicator</span>
+        <span class="deadlinks">Broken links checker</span>
+        <span class="downloadlinks">View All links</span>
+        <span class="aboutdeveloper">Privacy Policy</span>
+    </div>
+    <!-- home container
+    <div class="homecontainer">
+        <h1>
+            Welcome To Link Manager
+        </h1>
+    </div> -->
+    <!-- link identifer container -->
+    <div class="linkidentifiercontainer">
+       <span class="et">Enable rel value after links</span> 
+        <select class="selection">
+            <option value="disable">Disable</option>
+            <option value="enable">Enable</option>
+          
+        </select>
+        <span class="apply">Apply</span>
+        <table>
+            <thead><h1>Define Styles For Links</h1></thead>
+            <th>Attribute Values</th>
+            <th>Select Color</th>
+            <th>Current color</th>
+            <th>Strikethrough</th>
+            <th>Current strike</th>
+            <th>Select Background color</th>
+            <th>Current Background</th>
+
+            <th>Submit</th>
+            <th>Default</th>
+            <th>Status</th>
+            <tr>
+
+                <td>Alternate</td>
+
+                <td><input type="color" class="alternateColor"></td>
+                <td><span class="alternateCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="alternateCheckbox"></td>
+                <td><span class="alternateCurrentCheck"></span></td>
+                <td><input type="color" class="alternateBackground"></td>
+                <td><span class="alternateCurrentBackground"></span></td>
+                <td><button class="alternateSubmit cloudStore">submit</button></td>
+                <td><button class="alternateDefault cloudStore">default</button></td>
+                <td><span class="alternateStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Author</td>
+
+                <td><input type="color" class="authorColor"></td>
+                <td><span class="authorCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="authorCheckbox"></td>
+                <td><span class="authorCurrentCheck"></span></td>
+                <td><input type="color" class="authorBackground"></td>
+                <td><span class="authorCurrentBackground"></span></td>
+                <td><button class="authorSubmit cloudStore">submit</button></td>
+                <td><button class="authorDefault cloudStore">default</button></td>
+                <td><span class="authorStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Bookmark</td>
+
+                <td><input type="color" class="bookmarkColor"></td>
+                <td><span class="bookmarkCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="bookmarkCheckbox"></td>
+                <td><span class="bookmarkCurrentCheck"></span></td>
+                <td><input type="color" class="bookmarkBackground"></td>
+                <td><span class="bookmarkCurrentBackground"></span></td>
+                <td><button class="bookmarkSubmit cloudStore">submit</button></td>
+                <td><button class="bookmarkDefault cloudStore">default</button></td>
+                <td><span class="bookmarkStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>External</td>
+
+                <td><input type="color" class="externalColor"></td>
+                <td><span class="externalCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="externalCheckbox"></td>
+                <td><span class="externalCurrentCheck"></span></td>
+                <td><input type="color" class="externalBackground"></td>
+                <td><span class="externalCurrentBackground"></span></td>
+                <td><button class="externalSubmit cloudStore">submit</button></td>
+                <td><button class="externalDefault cloudStore">default</button></td>
+                <td><span class="externalStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Help</td>
+
+                <td><input type="color" class="helpColor"></td>
+                <td><span class="helpCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="helpCheckbox"></td>
+                <td><span class="helpCurrentCheck"></span></td>
+                <td><input type="color" class="helpBackground"></td>
+                <td><span class="helpCurrentBackground"></span></td>
+                <td><button class="helpSubmit cloudStore">submit</button></td>
+                <td><button class="helpDefault cloudStore">default</button></td>
+                <td><span class="helpStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>License</td>
+
+                <td><input type="color" class="licenseColor"></td>
+                <td><span class="licenseCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="licenseCheckbox"></td>
+                <td><span class="licenseCurrentCheck"></span></td>
+                <td><input type="color" class="licenseBackground"></td>
+                <td><span class="licenseCurrentBackground"></span></td>
+                <td><button class="licenseSubmit cloudStore">submit</button></td>
+                <td><button class="licenseDefault cloudStore">default</button></td>
+                <td><span class="licenseStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Next</td>
+
+                <td><input type="color" class="nextColor"></td>
+                <td><span class="nextCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="nextCheckbox"></td>
+                <td><span class="nextCurrentCheck"></span></td>
+                <td><input type="color" class="nextBackground"></td>
+                <td><span class="nextCurrentBackground"></span></td>
+                <td><button class="nextSubmit cloudStore">submit</button></td>
+                <td><button class="nextDefault cloudStore">default</button></td>
+                <td><span class="nextStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Nofollow</td>
+
+                <td><input type="color" class="nofollowColor"></td>
+                <td><span class="nofollowCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="nofollowCheckbox"></td>
+                <td><span class="nofollowCurrentCheck"></span></td>
+                <td><input type="color" class="nofollowBackground"></td>
+                <td><span class="nofollowCurrentBackground"></span></td>
+                <td><button class="nofollowSubmit cloudStore">submit</button></td>
+                <td><button class="nofollowDefault cloudStore">default</button></td>
+                <td><span class="nofollowStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Noreferrer</td>
+
+                <td><input type="color" class="noreferrerColor"></td>
+                <td><span class="noreferrerCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="noreferrerCheckbox"></td>
+                <td><span class="noreferrerCurrentCheck"></span></td>
+                <td><input type="color" class="noreferrerBackground"></td>
+                <td><span class="noreferrerCurrentBackground"></span></td>
+                <td><button class="noreferrerSubmit cloudStore">submit</button></td>
+                <td><button class="noreferrerDefault cloudStore">default</button></td>
+                <td><span class="noreferrerStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Noopener</td>
+
+                <td><input type="color" class="noopenerColor"></td>
+                <td><span class="noopenerCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="noopenerCheckbox"></td>
+                <td><span class="noopenerCurrentCheck"></span></td>
+                <td><input type="color" class="noopenerBackground"></td>
+                <td><span class="noopenerCurrentBackground"></span></td>
+                <td><button class="noopenerSubmit cloudStore">submit</button></td>
+                <td><button class="noopenerDefault cloudStore">default</button></td>
+                <td><span class="noopenerStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Prev</td>
+
+                <td><input type="color" class="prevColor"></td>
+                <td><span class="prevCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="prevCheckbox"></td>
+                <td><span class="prevCurrentCheck"></span></td>
+                <td><input type="color" class="prevBackground"></td>
+                <td><span class="prevCurrentBackground"></span></td>
+                <td><button class="prevSubmit cloudStore">submit</button></td>
+                <td><button class="prevDefault cloudStore">default</button></td>
+                <td><span class="prevStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Search</td>
+
+                <td><input type="color" class="searchColor"></td>
+                <td><span class="searchCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="searchCheckbox"></td>
+                <td><span class="searchCurrentCheck"></span></td>
+                <td><input type="color" class="searchBackground"></td>
+                <td><span class="searchCurrentBackground"></span></td>
+                <td><button class="searchSubmit cloudStore">submit</button></td>
+                <td><button class="searchDefault cloudStore">default</button></td>
+                <td><span class="searchStatus"></span></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Sponsored</td>
+
+                <td><input type="color" class="sponsoredColor"></td>
+                <td><span class="sponsoredCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="sponsoredCheckbox"></td>
+                <td><span class="sponsoredCurrentCheck"></span></td>
+                <td><input type="color" class="sponsoredBackground"></td>
+                <td><span class="sponsoredCurrentBackground"></span></td>
+                <td><button class="sponsoredSubmit cloudStore">submit</button></td>
+                <td><button class="sponsoredDefault cloudStore">default</button></td>
+                <td><span class="sponsoredStatus"></span></td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>Tag</td>
+
+                <td><input type="color" class="tagColor"></td>
+                <td><span class="tagCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="tagCheckbox"></td>
+                <td><span class="tagCurrentCheck"></span></td>
+                <td><input type="color" class="tagBackground"></td>
+                <td><span class="tagCurrentBackground"></span></td>
+                <td><button class="tagSubmit cloudStore">submit</button></td>
+                <td><button class="tagDefault cloudStore">default</button></td>
+                <td><span class="tagStatus"></span></td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>UGC</td>
+
+                <td><input type="color" class="ugcColor"></td>
+                <td><span class="ugcCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="ugcCheckbox"></td>
+                <td><span class="ugcCurrentCheck"></span></td>
+                <td><input type="color" class="ugcBackground"></td>
+                <td><span class="ugcCurrentBackground"></span></td>
+                <td><button class="ugcSubmit cloudStore">submit</button></td>
+                <td><button class="ugcDefault cloudStore">default</button></td>
+                <td><span class="ugcStatus"></span></td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>None</td>
+
+                <td><input type="color" class="noneColor"></td>
+                <td><span class="noneCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="noneCheckbox"></td>
+                <td><span class="noneCurrentCheck"></span></td>
+                <td><input type="color" class="noneBackground"></td>
+                <td><span class="noneCurrentBackground"></span></td>
+                <td><button class="noneSubmit cloudStore">submit</button></td>
+                <td><button class="noneDefault cloudStore">default</button></td>
+                <td><span class="noneStatus"></span></td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>Apply to all</td>
+
+                <td><input type="color" class="allColor"></td>
+                <td><span class="allCurrentColor"></span></td>
+
+                <td><input type="checkbox" class="allCheckbox"></td>
+                <td><span class="allCurrentCheck"></span></td>
+                <td><input type="color" class="allBackground"></td>
+                <td><span class="allCurrentBackground"></span></td>
+                <td><button class="allSubmit cloudStore">submit</button></td>
+                <td><button class="allDefault cloudStore">default</button></td>
+                <td><span class="allStatus"></span></td>
+
+
+            </tr>
+
+
+
+            <tr>
+                <br><br>
+            <tr>
+                <td>
+                    <button class="resetAllData">Disable all</button>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+    <!-- domain identifier -->
+    <div class="domainidentifiercontainer">
+      
+        <form class="domainForm" action="?domainidentifier">
+            <h1>Define a URL and Styles to identify</h1>
+            <fieldset class="domainfieldset">
+                <legend>Define URL</legend>
+                <input type="url" placeholder="https://www.example.com" class="domainDetectInput" required>
+                <legend>Define Styles</legend>
+                <label for="color">Color</label>
+                <input type="color" class="domdetcol">
+                <label for="backgroundColor">Background Color</label>
+                <input type="color" class="domdetbcol">
+                <label for="checkbox">Strikethrough</label>
+                <input type="checkbox" class="domdetchk">
+                <button type="submit" class="domainDetectButton">Submit links</button>
+            </fieldset>
+        </form>
+        <hr>
+        <span class="urlError"></span>
+        <table>
+
+
+            <th>Domain</th>
+            <th>Color</th>
+            <th>Background Color</th>
+            <th>Strikethrough</th>
+            <th>Delete</th>
+
+
+            <tr class="links1"></tr>
+            <tr class="links2"></tr>
+            <tr class="links3"></tr>
+            <tr class="links4"></tr>
+            <tr class="links5"></tr>
+        </table>
+
+
+
+    </div>
+
+    <!-- broken links container -->
+    <div class="deadlinkscontainer">
+        <div class="beforeProgress">
+            <a href="blacklisted.html">Blacklist</a>
+            <progress>Checking Broken Links</progress>
+            <fieldset class="brokenData1">
+                <legend>Broken Links Data</legend>
+                <div class="brokenData">
+                    <h1 class="noBroken">Seems there is no broken links are available</h1>
+                </div>
+                <a href="" class="bdownload"> <button class="brokenDownload"> Save</button></a>
+            </fieldset>
+        </div>
+        <div class="afterProgress">
+            <table class="prevBstyle" hidden="true">
+                <tr>
+                    <th>Color</th>
+                    <th>Background Color</th>
+                    <th>Strikethrough</th>
+                    <th>Remove</th>
+                </tr>
+                <tr>
+                    <td class="brokenTableColor"></td>
+                    <td class="brokenTableBcolor"></td>
+                    <td class="brokenTableCheckbox"></td>
+                    <td class="remove">Remove</td>
+                </tr>
+            </table>
+            <fieldset class="brokenFieldset">
+                <legend>Define Styles for broken links</legend>
+                Color <input type="color" class="brokenColor">
+                Background Color <input type="color" class="brokenBcolor">
+                Strikethrough <input type="checkbox" class="brokenCheckbox">
+                <button class="brokenSubmit">Submit</button>
+                <span class="brokenStyleContainer"></span>
+                <button class="brokenStatus">Check Broken Links</button>
+            </fieldset>
+            <div class="mn"></div>
+<h3>Note: This will fetch all URLs of your webpage , if you don't want to fetch some links then you can <a href="blacklisted.html">Blacklist</a> those links</h3>
+        </div>
+    </div>
+
+    <!-- download link container -->
+    <div class="downloadlinkscontainer">
+
+
+
+        <div class="linksArea">
+
+            <fieldset class="alllinks">
+                <legend>All links</legend>
+                <textarea class="allArea" readonly>No links data is available</textarea>
+                <br>
+                <button class="allDownload">Save</button>
+            </fieldset>
+            <div class="second">
+                <fieldset>
+                    <legend>Alternate</legend>
+                    <textarea class="alternateArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="alternateDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Author</legend>
+                    <textarea class="authorArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="authorDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Bookmark</legend>
+                    <textarea class="bookmarkArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="bookmarkDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>External</legend>
+                    <textarea class="externalArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="externalDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Help</legend>
+                    <textarea class="helpArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="helpDownload">Save</button>
+                </fieldset>
+                <fieldset>
+                    <legend>License</legend>
+                    <textarea class="licenseArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="licenseDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Next</legend>
+                    <textarea class="nextArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="nextDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nofollow</legend>
+                    <textarea class="nofollowArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="nofollowDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Noreferrer</legend>
+                    <textarea class="noreferrerArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="noreferrerDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Noopener</legend>
+                    <textarea class="noopenerArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="noopenerDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Prev</legend>
+                    <textarea class="prevArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="prevDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Search</legend>
+                    <textarea class="searchArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="searchDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sponsored</legend>
+                    <textarea class="sponsoredArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="sponsoredDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tag</legend>
+                    <textarea class="tagArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="tagDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>UGC</legend>
+                    <textarea class="ugcArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="ugcDownload">Save</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>None</legend>
+                    <textarea class="noneArea" readonly>No links data is available</textarea>
+                    <br>
+                    <button class="noneDownload">Save</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <!-- about developer container -->
+    <div class="aboutdevelopercontainer">
+       <strong> This Extension does not share personal information to any third parties nor does it store any information to any server. If you have any question then feel free to contact me directly at <a href="linksbot@gmail.com">Email</a></strong>
+    </div>
+</body>
+<script src="popup.js"></script>
+
+<script src="style.js"></script>
+
+
+</html>
